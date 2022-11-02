@@ -3,7 +3,7 @@ import {Avatar, Box, ListItem, ListItemAvatar, ListItemText, Paper, Typography} 
 import {EmojiPeople, Inventory2, Paid, ShoppingCart, StarRate} from "@mui/icons-material";
 import {receipts} from "../receipts/Receipts";
 import moment from 'moment'
-import {totalItems, totalRevenue} from "../receipts/TotalCount";
+import {mostPopular, totalCustomers, totalItems, totalRevenue} from "../receipts/TotalCount";
 
 
 
@@ -64,7 +64,7 @@ const Stats = ({setSelectedLink, link}) => {
                         justifyContent:'center'
                     }}>
                     <StarRate sx={{height:100, width:100, opacity:0.3, mr:1}}/>
-                    <Typography variant='h4'>Book</Typography>
+                    <Typography variant='h4'>{mostPopular}</Typography>
                 </Box>
             </Paper>
             <Paper elevation={3} sx={{p:3}}>
@@ -75,7 +75,7 @@ const Stats = ({setSelectedLink, link}) => {
                         justifyContent:'center'
                     }}>
                     <EmojiPeople sx={{height:100, width:100, opacity:0.3, mr:1}}/>
-                    <Typography variant='h4'>234</Typography>
+                    <Typography variant='h4'>{totalCustomers}</Typography>
                 </Box>
             </Paper>
             <Paper elevation={3} sx={{p:2, gridColumn:3, gridRow:'1/4'}}>

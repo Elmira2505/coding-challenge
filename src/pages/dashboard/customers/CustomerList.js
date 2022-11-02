@@ -1,69 +1,57 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React from 'react'
 import {useEffect, useMemo} from "react";
-const CustomerList = ({setSelectedLink, link}) => {
+import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
+import {receipts} from "../receipts/Receipts";
+import {useNavigate} from "react-router-dom";
+import CustomerCards from "./CustomerCards";
 
+
+
+const CustomerList = ({setSelectedLink, link}) => {
     useEffect(() => {
         setSelectedLink(link);
     }, []);
 
 
-    function createData(name, calories, fat, carbs, protein) {
-        return { name, calories, fat, carbs, protein };
-    }
+    // const customerProfile = [
+    //     {
+    //         field: 'name',
+    //         headerName: 'Customer Name',
+    //         renderCell: ({row} : params) => <Link to{`/`> </Link>
+    //     }
+    // ]
 
-    const rows = [
-        createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-        createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-        createData('Eclair', 262, 16.0, 24, 6.0),
-        createData('Cupcake', 305, 3.7, 67, 4.3),
-        createData('Gingerbread', 356, 16.0, 49, 3.9),
-    ];
-
-    const columns = useMemo(() => [
-        {field:'number', headerName: 'Number', width:70},
-        {field:'name', headerName: 'Customer Name', width:170},
-        {field:'date', headerName: 'Date', width:170},
-        {field:'amount', headerName: 'Amount', width:170},
-        {field:'receipt', headerName: 'Receipt', width:170},
-        ], [])
 
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <div>
+        <TableContainer component={Paper} sx={{ minWidth: 550, maxHeight: '300px' }}>
+            <Table  aria-label="simple table" stickyHeader>
                 <TableHead>
                     <TableRow>
-                        <TableCell>{receipts}</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                        <TableCell align="center">Order ID</TableCell>
+                        <TableCell align="center">Amount</TableCell>
+                        <TableCell align="center">Total items</TableCell>
+                        <TableCell align="center">Items</TableCell>
+                        <TableCell align="center">Date</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
+                    {receipts.map((row) => (
                         <TableRow
-                            key={row.name}
+                            key={row.id}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
+                            <TableCell align="center">{row.OrderId}</TableCell>
+                            <TableCell align="center">{row.Total}</TableCell>
+                            <TableCell align="center">Кол-во предметов</TableCell>
+                            <TableCell align="center">Какие предметы</TableCell>
+                            <TableCell align="center">{row.Date}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
             </Table>
         </TableContainer>
+        </div>
     );
 };
 

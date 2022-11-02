@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const receipts = [
     {
-        id: uuidv4(),
+
         OrderId: 1,
         CustomerId: 1,
         CustomerName: "Elizabeth",
@@ -32,7 +32,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 2,
         CustomerId: 2,
         CustomerName: "Alexander",
@@ -52,7 +52,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 3,
         CustomerId: 1,
         CustomerName: "Elizabeth",
@@ -72,7 +72,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 4,
         CustomerId: 3,
         CustomerName: "Emira",
@@ -97,7 +97,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 5,
         CustomerId: 4,
         CustomerName: "LJ",
@@ -122,7 +122,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 6,
         CustomerId: 5,
         CustomerName: "Armand",
@@ -142,7 +142,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 7,
         CustomerId: 6,
         CustomerName: "Elizabeth",
@@ -162,7 +162,7 @@ export const receipts = [
         ]
     },
     {
-        id: uuidv4(),
+
         OrderId: 8,
         CustomerId: 3,
         CustomerName: "Emira",

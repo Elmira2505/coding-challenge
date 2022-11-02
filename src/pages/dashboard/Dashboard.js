@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useMemo, useState} from "react";
 import SideList from "./SideList";
-import {createTheme, ThemeProvider, Tooltip} from "@mui/material";
+import {Button, createTheme, ThemeProvider, Tooltip} from "@mui/material";
 import {Brightness4, Brightness7, Home} from "@mui/icons-material";
 import {useNavigate} from "react-router-dom";
 
@@ -37,10 +37,23 @@ const AppBar = styled(MuiAppBar, {
 
 export default function Dashboard() {
     const [open, setOpen] = useState(false);
-    const [dark, setDark] = useState(true)
+    const [dark, setDark] = useState(true);
+    const [light, setLight] = useState(true)
+
+    const lightTheme = useMemo(() => createTheme({
+        palette: {
+            background: {
+                default: "#e8efef"
+            },
+            mode: light ? 'light' : 'dark',
+        }
+    }), [light]);
 
     const darkTheme = useMemo(() => createTheme({
         palette: {
+            background: {
+                default: "#333f3f"
+            },
             mode: dark ? 'dark' : 'light',
         },
     }), [dark]);
@@ -52,7 +65,7 @@ export default function Dashboard() {
     const navigate = useNavigate()
 
     return (
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={light ? lightTheme : darkTheme}>
             <Box sx={{display: 'flex'}}>
                 <CssBaseline/>
                 <AppBar position="fixed" open={open}>
@@ -82,9 +95,9 @@ export default function Dashboard() {
                         >
                             Dashboard
                         </Typography>
-                        <IconButton onClick={() => setDark(!dark)}>
-                            {dark ? <Brightness7 /> : <Brightness4 />}
-                        </IconButton>
+
+                            <IconButton onClick={() => setLight((prev) => !prev)}> {dark ? <Brightness7 /> : <Brightness4 />}</IconButton>
+
                     </Toolbar>
                 </AppBar>
                 <SideList {...{ open, setOpen }} />

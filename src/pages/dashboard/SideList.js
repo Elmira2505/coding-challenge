@@ -14,10 +14,11 @@ import {ChevronLeft, Inbox, Logout, Mail, PeopleAlt, Dashboard, Inventory2, Quer
 import {useValue} from "../../context/ContextProvider";
 import {Avatar, Tooltip} from "@mui/material";
 import {Route, Routes, useNavigate} from "react-router-dom";
-import CustomerList from "./customers/CustomerList";
 import Orders from "./orders/Orders";
 import Stats from "./Statistics/Stats";
 import HomePage from "./HomePage";
+import CustomerCards from "./customers/CustomerCards";
+import CustomerList from "./customers/CustomerList";
 
 const drawerWidth = 240;
 
