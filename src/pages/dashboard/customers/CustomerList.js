@@ -12,16 +12,6 @@ const CustomerList = ({setSelectedLink, link}) => {
         setSelectedLink(link);
     }, []);
 
-
-    // const customerProfile = [
-    //     {
-    //         field: 'name',
-    //         headerName: 'Customer Name',
-    //         renderCell: ({row} : params) => <Link to{`/`> </Link>
-    //     }
-    // ]
-
-
     return (
         <div>
         <TableContainer component={Paper} sx={{ minWidth: 550, maxHeight: '300px' }}>

@@ -9,8 +9,6 @@ const CustomerCards = ({setSelectedLink, link}) => {
         setSelectedLink(link);
     }, []);
 
-    // let name = receipts.CustomerId;
-    // console.log(name)
 
     return (
         <div>
@@ -41,7 +39,7 @@ const CustomerCards = ({setSelectedLink, link}) => {
                 </Card>
             </Grid>
             <h3>Purchase History</h3>
-            <CustomerList />
+            <CustomerList setSelectedLink={setSelectedLink} link={link}/>
         </div>
 
     );

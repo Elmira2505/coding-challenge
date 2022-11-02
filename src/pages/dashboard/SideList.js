@@ -81,7 +81,7 @@ const SideList = ({open, setOpen}) => {
     const [selectedLink, setSelectedLink] = useState('')
 
     const list = useMemo(()=>[
-        {title:'Customers', icon:<PeopleAlt/>, link:'customers', component:<CustomerList {...{setSelectedLink, link: 'customers'}}/>},
+        {title:'Customers', icon:<PeopleAlt/>, link:'customers', component:<CustomerCards {...{setSelectedLink, link: 'customers'}}/>},
         {title:'Statistics', icon:<QueryStats/>, link:'stats', component:<Stats {...{setSelectedLink, link: 'stats'}}/>},
         {title:'Orders', icon:<Inventory2/>, link:'orders', component:<Orders {...{setSelectedLink, link: 'orders'}}/>},
         {title:'Dashboard', icon:<Dashboard/>, link:'dashboard', component:<HomePage {...{setSelectedLink, link: 'dashboard'}}/>},

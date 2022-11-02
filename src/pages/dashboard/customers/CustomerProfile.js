@@ -9,10 +9,12 @@ const CustomerProfile = () => {
 
     const navigate = useNavigate();
 
-    const { CustomerId } = useParams
+
     return (
         <div>
-           <h1>Hello {CustomerId}</h1>
+           <h1>Hello </h1>
+            <CustomerCards/>
+            <CustomerList/>
         </div>
     );
 };
