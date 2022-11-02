@@ -5,7 +5,7 @@ export const receipts = [
         id: uuidv4(),
         OrderId: 1,
         CustomerId: 1,
-        name: "Elizabeth",
+        CustomerName: "Elizabeth",
         Total: "$30.00",
         Date: "2021-02-01 08:30:00.000",
         Items: [

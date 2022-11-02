@@ -3,7 +3,7 @@ import {Avatar, Box, ListItem, ListItemAvatar, ListItemText, Paper, Typography} 
 import {EmojiPeople, Inventory2, Paid, ShoppingCart, StarRate} from "@mui/icons-material";
 import {receipts} from "../receipts/Receipts";
 import moment from 'moment'
-import {totalRevenue} from "../receipts/TotalCount";
+import {totalItems, totalRevenue} from "../receipts/TotalCount";
 
 
 
@@ -33,6 +33,7 @@ const Stats = ({setSelectedLink, link}) => {
                     <Typography variant='h4'>{totalRevenue}</Typography>
                 </Box>
             </Paper>
+
             <Paper elevation={3} sx={{p:3}}>
                 <Typography>Total orders</Typography>
                 <Box
@@ -52,7 +53,7 @@ const Stats = ({setSelectedLink, link}) => {
                         justifyContent:'center'
                     }}>
                     <ShoppingCart sx={{height:100, width:100, opacity:0.3, mr:1}}/>
-                    <Typography variant='h4'>10008923</Typography>
+                    <Typography variant='h4'>{totalItems}</Typography>
                 </Box>
             </Paper>
             <Paper elevation={3} sx={{p:3}}>
@@ -84,10 +85,9 @@ const Stats = ({setSelectedLink, link}) => {
                     <Box key={order.id}>
                         <ListItem>
                             <ListItemAvatar>
-                                <Avatar alt={receipts.name}/>
+                                <Avatar/>
                             </ListItemAvatar>
                             <ListItemText
-                                primary={receipts.name}
                                 secondary={`Date purchased: ${moment(receipts.date).format('YYYY-MM-DD H:mm:ss')}`}
                             />
                         </ListItem>
