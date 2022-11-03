@@ -88,15 +88,17 @@ const Stats = ({setSelectedLink, link}) => {
                                 <Avatar/>
                             </ListItemAvatar>
                             <ListItemText
-                                secondary={`Date purchased: ${moment(receipts.date).format('YYYY-MM-DD H:mm:ss')}`}
+                                primary={order.CustomerName}
+                                secondary={`Purchase date: ${order.Date}`}
                             />
+
                         </ListItem>
                     </Box>)}
 
                     {/*{receipts.map(order => {*/}
                     {/*    <ListItemText key={order} order={order}*/}
                     {/*    primary={receipts.name}*/}
-                    {/*    secondary={`Date purchased: ${moment(receipts.date).format('YYYY-MM-DD H:mm:ss')}`}/>*/}
+                    {/*    secondary={`Date purchased: ${moment(order.date).format('YYYY-MM-DD H:mm:ss')}`}/>*/}
                     {/*})}*/}
 
                 </Box>
