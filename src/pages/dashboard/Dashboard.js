@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useMemo, useState} from "react";
 import SideList from "./SideList";
-import {Button, createTheme, ThemeProvider, Tooltip} from "@mui/material";
+import {createTheme, ThemeProvider, Tooltip} from "@mui/material";
 import {Brightness4, Brightness7, Home} from "@mui/icons-material";
 import {useNavigate} from "react-router-dom";
 
@@ -66,10 +66,10 @@ export default function Dashboard() {
 
     return (
         <ThemeProvider theme={light ? lightTheme : darkTheme}>
-            <Box sx={{display: 'flex'}}>
+            <Box sx={{display: 'flex'}} >
                 <CssBaseline/>
                 <AppBar position="fixed" open={open}>
-                    <Toolbar>
+                    <Toolbar sx={{ bgcolor: "orange"}}>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
@@ -93,11 +93,9 @@ export default function Dashboard() {
                             component="div"
                             sx={{ flexGrow: 1 }}
                         >
-                            Dashboard
+                            STRIDER GENERAL STORE
                         </Typography>
-
                             <IconButton onClick={() => setLight((prev) => !prev)}> {dark ? <Brightness7 /> : <Brightness4 />}</IconButton>
-
                     </Toolbar>
                 </AppBar>
                 <SideList {...{ open, setOpen }} />

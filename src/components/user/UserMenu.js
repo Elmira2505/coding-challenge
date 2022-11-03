@@ -26,7 +26,7 @@ const UserMenu = ({anchorUserMenu, setAnchorUserMenu}) => {
                 </ListItemIcon>
                 Profile
             </MenuItem>
-            <MenuItem onClick={() => navigate('dashboard')}>
+            <MenuItem onClick={() => navigate('dashboard/stats')}>
                 <ListItemIcon>
                     <Dashboard fontSize="small"/>
                 </ListItemIcon>

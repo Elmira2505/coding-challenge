@@ -16,9 +16,8 @@ import {Avatar, Tooltip} from "@mui/material";
 import {Route, Routes, useNavigate} from "react-router-dom";
 import Orders from "./orders/Orders";
 import Stats from "./Statistics/Stats";
-import HomePage from "./HomePage";
 import CustomerCards from "./customers/CustomerCards";
-import CustomerList from "./customers/CustomerList";
+
 
 const drawerWidth = 240;
 
@@ -84,7 +83,7 @@ const SideList = ({open, setOpen}) => {
         {title:'Customers', icon:<PeopleAlt/>, link:'customers', component:<CustomerCards {...{setSelectedLink, link: 'customers'}}/>},
         {title:'Statistics', icon:<QueryStats/>, link:'stats', component:<Stats {...{setSelectedLink, link: 'stats'}}/>},
         {title:'Orders', icon:<Inventory2/>, link:'orders', component:<Orders {...{setSelectedLink, link: 'orders'}}/>},
-        {title:'Dashboard', icon:<Dashboard/>, link:'dashboard', component:<HomePage {...{setSelectedLink, link: 'dashboard'}}/>},
+        // {title:'Dashboard', icon:<Dashboard/>, link:'dashboard', component:<HomePage {...{setSelectedLink, link: 'dashboard'}}/>},
     ], [])
 
     return (

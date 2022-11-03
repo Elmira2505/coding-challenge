@@ -15,9 +15,9 @@ const NavBar = () => {
         dispatch,
     } = useValue();
     return (
-        <AppBar>
-            <Container maxWidth='lg'>
-                <Toolbar disableGutters>
+        <AppBar sx={{ bgcolor: "orange"}}>
+            <Container maxWidth='lg' >
+                <Toolbar disableGutters >
                     <Box>
                         <IconButton size='large' color='inherit'>
                             <MenuIcon/>

@@ -95,12 +95,6 @@ const Stats = ({setSelectedLink, link}) => {
                         </ListItem>
                     </Box>)}
 
-                    {/*{receipts.map(order => {*/}
-                    {/*    <ListItemText key={order} order={order}*/}
-                    {/*    primary={receipts.name}*/}
-                    {/*    secondary={`Date purchased: ${moment(order.date).format('YYYY-MM-DD H:mm:ss')}`}/>*/}
-                    {/*})}*/}
-
                 </Box>
             </Paper>
 
