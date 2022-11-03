@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import CustomerList from "./CustomerList";
-import {Avatar, Box, Button, Card, CardActions, CardContent, Grid, ListItemAvatar, Typography} from "@mui/material";
+import {Avatar, Card, CardContent, Grid, ListItemAvatar, Typography} from "@mui/material";
 import {receipts} from "../receipts/Receipts";
 
 
@@ -21,9 +21,8 @@ const CustomerCards = ({setSelectedLink, link}) => {
                         <ListItemAvatar>
                             <Avatar  sx={{ size: 'lg'}}/>
                         </ListItemAvatar>
-
                         <Typography variant="h7" component="div">
-                            Name: {receipts.CustomerName}
+                            Name:
                         </Typography>
                         <Typography variant="h7" component="div">
                             Total items:

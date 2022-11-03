@@ -1,14 +1,9 @@
 import NavBar from "../../components/NavBar";
-import {Box, Card, CardContent, Container, Grid, ListItemIcon, Paper, Typography} from "@mui/material";
+import {Card, CardContent, Container, Grid, ListItemIcon, Paper, Typography} from "@mui/material";
 import {AttachMoney, LibraryBooks, QueryStats} from "@mui/icons-material";
 import React from "react";
-import {styled} from '@mui/material/styles';
 
-const Div = styled('div')(({theme}) => ({
-    ...theme.typography.button,
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(1),
-}));
+
 
 function Home() {
     return (
@@ -23,7 +18,7 @@ function Home() {
                 <Grid item md={3}>
                     <Card sx={{minWidth: 300, minHeight: 200, m: 1}}>
                         <CardContent>
-                            <ListItemIcon sx={{fontSize: 'large'}}>
+                            <ListItemIcon sx={{fontSize: 'xlarge'}}>
                                 <QueryStats/>
                             </ListItemIcon>
                             <Typography gutterBottom variant="h4" component="div">
@@ -43,7 +38,7 @@ function Home() {
                     <Card sx={{minWidth: 300, minHeight: 200, m: 1}}>
                         <CardContent>
                             <ListItemIcon>
-                                <AttachMoney sx={{fontSize: 'large'}}/>
+                                <AttachMoney sx={{fontSize: 'xlarge'}}/>
                             </ListItemIcon>
                             <Typography gutterBottom variant="h4" component="div">
                                 Finance
@@ -62,7 +57,7 @@ function Home() {
                     <Card sx={{minWidth: 300, minHeight: 200, m: 1}}>
                         <CardContent>
                             <ListItemIcon>
-                                <LibraryBooks sx={{fontSize: 'large'}}/>
+                                <LibraryBooks sx={{fontSize: 'xlarge'}}/>
                             </ListItemIcon>
                             <Typography gutterBottom variant="h4" component="div">
                                 Documents

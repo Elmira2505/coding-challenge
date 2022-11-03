@@ -14,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path="dashboard/*" element={<Dashboard />} />
                     <Route path="*" element={<Home />} />
-                    <Route path="dashboard/customers/:CustomerId" element={<CustomerCards />} />
+                    <Route path="dashboard/orders/customers/:CustomerId" element={<CustomerCards />} />
 
                 </Routes>
             </BrowserRouter>
