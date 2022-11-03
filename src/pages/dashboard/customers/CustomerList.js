@@ -2,8 +2,7 @@ import React from 'react'
 import {useEffect, useMemo} from "react";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 import {receipts} from "../receipts/Receipts";
-import {useNavigate} from "react-router-dom";
-import CustomerCards from "./CustomerCards";
+
 
 
 

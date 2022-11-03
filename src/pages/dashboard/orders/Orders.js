@@ -26,6 +26,7 @@ const OrderList = ({setSelectedLink, link}) => {
 const router = useNavigate()
     console.log(router)
 
+
     return (
         <TableContainer component={Paper} sx={{ minWidth: 500, maxHeight: '800px' }}>
            <Typography variant={'h4'} sx={{m:3}}>Orders</Typography>
@@ -48,7 +49,7 @@ const router = useNavigate()
                         >
                             <TableCell align="center">{row.CustomerId}</TableCell>
                             <TableCell align="center">
-                                    <Link to={"dashboard/customers/"+row.CustomerId}>
+                                    <Link to={"customers/"+row.CustomerId}>
                                         {row.CustomerName}
                                     </Link>
                             </TableCell>

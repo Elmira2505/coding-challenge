@@ -144,7 +144,7 @@ export const receipts = [
 
         OrderId: 7,
         CustomerId: 6,
-        CustomerName: "Elizabeth",
+        CustomerName: "Beth",
         Total: "$30.50",
         Date: "2021-02-06 17:30:00.000",
         Items: [

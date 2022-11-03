@@ -11,6 +11,8 @@ export const totalItems = receipts.map((el, i) => el.Items[0].Quantity)
 export const customerCount = receipts.map((el) => el.CustomerId)
 export const totalCustomers = customerCount.filter((el, i) => customerCount.indexOf(el) === i).length;
 
+
+
 //most popular item
  const mostPopularItem = () =>{
     const items = receipts.map((el, i) => el.Items.map((el) => el.Item)).flat();
@@ -36,10 +38,9 @@ export const totalCustomers = customerCount.filter((el, i) => customerCount.inde
 }
 export const mostPopular = mostPopularItem();
 
- //total items of one customer
- const totalItemsOfCustomer = receipts.map((el, i) => el.Items[0].Quantity);
 
-
+//total items of the customer
+//total money spent by the customer
 
 
 

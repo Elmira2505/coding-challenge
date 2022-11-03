@@ -1,11 +1,7 @@
-
-
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/dashboard/HomePage";
 import CustomerCards from "./pages/dashboard/customers/CustomerCards";
-import CustomerProfile from "./pages/dashboard/customers/CustomerProfile";
-
 
 function App() {
     return (
@@ -14,7 +10,7 @@ function App() {
                 <Routes>
                     <Route path="dashboard/*" element={<Dashboard />} />
                     <Route path="*" element={<Home />} />
-                    <Route path="dashboard/orders/customers/:CustomerId" element={<CustomerCards />} />
+                    <Route path="dashboards/orders/customers/:CustomerId" element={<CustomerCards />} />
 
                 </Routes>
             </BrowserRouter>

@@ -2,12 +2,21 @@ import React, {useEffect} from 'react';
 import CustomerList from "./CustomerList";
 import {Avatar, Card, CardContent, Grid, ListItemAvatar, Typography} from "@mui/material";
 import {receipts} from "../receipts/Receipts";
+import {useNavigate, useParams, useSearchParams} from "react-router-dom";
+import {totalCustomers} from "../receipts/TotalCount";
 
 
-const CustomerCards = ({setSelectedLink, link}) => {
+const CustomerCards = ({setSelectedLink, link, CustomerId, CustomerName, Total}) => {
     useEffect(() => {
         setSelectedLink(link);
     }, []);
+
+    const navigate = useNavigate();
+    let params= useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
+    console.log(params, searchParams)
+
+
 
 
     return (
@@ -22,7 +31,12 @@ const CustomerCards = ({setSelectedLink, link}) => {
                             <Avatar  sx={{ size: 'lg'}}/>
                         </ListItemAvatar>
                         <Typography variant="h7" component="div">
-                            Name:
+                            {receipts.filter(el=> el === el.id)
+                                     .map((name)=>
+                            <div key={name.id}>{name.CustomerName}</div>)}
+                        </Typography>
+                        <Typography variant="h7" component="div">
+                           ID: {params.CustomerId}
                         </Typography>
                         <Typography variant="h7" component="div">
                             Total items:
